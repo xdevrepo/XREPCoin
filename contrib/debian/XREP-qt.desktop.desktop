@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=XREP
+Comment=XREP P2P Cryptocurrency
+Exec=XREP-qt %u
+Terminal=false
+Type=Application
+Icon=XREP128
+MimeType=x-scheme-handler/XREP;
+Categories=Office;Finance;
+Name[en_US]=XREP-qt.desktop

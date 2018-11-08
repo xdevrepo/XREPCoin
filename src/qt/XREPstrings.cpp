@@ -203,10 +203,10 @@ QT_TRANSLATE_NOOP("XREP-core", ""
 QT_TRANSLATE_NOOP("XREP-core", ""
 "You must specify a masternodeprivkey in the configuration. Please see "
 "documentation for help."),
-QT_TRANSLATE_NOOP("XREP-core", "(39815 could be used only on mainnet)"),
+QT_TRANSLATE_NOOP("XREP-core", "(15504 could be used only on mainnet)"),
 QT_TRANSLATE_NOOP("XREP-core", "(default: %s)"),
 QT_TRANSLATE_NOOP("XREP-core", "(default: 1)"),
-QT_TRANSLATE_NOOP("XREP-core", "(must be 39815 for mainnet)"),
+QT_TRANSLATE_NOOP("XREP-core", "(must be 15504 for mainnet)"),
 QT_TRANSLATE_NOOP("XREP-core", "<category> can be:"),
 QT_TRANSLATE_NOOP("XREP-core", "Accept command line and JSON-RPC commands"),
 QT_TRANSLATE_NOOP("XREP-core", "Accept connections from outside (default: 1 if no -proxy or -connect)"),

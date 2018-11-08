@@ -56,11 +56,11 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x00000bdaec89bef3353a95fe4a8b93dd78bcbcba9ab217617975577ecf70362f"));
+    (0, uint256("0x0000043dbb1c7fd0dafceeecfd554b61e2913f71866555b86ee3b8e23b75a2f4"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1539630702, // * UNIX timestamp of last checkpoint block
+    1541638066, // * UNIX timestamp of last checkpoint block
     0,          // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     1000        // * estimated number of transactions per day after checkpoint
@@ -68,20 +68,20 @@ static const Checkpoints::CCheckpointData data = {
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
     boost::assign::map_list_of
-    (0, uint256("0x00"));
+    (0, uint256("0x0000043dbb1c7fd0dafceeecfd554b61e2913f71866555b86ee3b8e23b75a2f4"));
 
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
-    1539630702,
+    1541638066,
     0,
     100};
 
 static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
     boost::assign::map_list_of
-    (0, uint256("0x00"));
+    (0, uint256("0x0000043dbb1c7fd0dafceeecfd554b61e2913f71866555b86ee3b8e23b75a2f4"));
 static const Checkpoints::CCheckpointData dataRegtest = {
     &mapCheckpointsRegtest,
-    1539630702,
+    1541638066,
     0,
     100};
 
@@ -130,12 +130,12 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 4-byte int at any alignment.
          */
-        pchMessageStart[0] = 0xa3;
-        pchMessageStart[1] = 0xc5;
-        pchMessageStart[2] = 0x3b;
-        pchMessageStart[3] = 0x6f;
+        pchMessageStart[0] = 0xb2;
+        pchMessageStart[1] = 0xc4;
+        pchMessageStart[2] = 0x4d;
+        pchMessageStart[3] = 0x6c;
         vAlertPubKey = ParseHex("041f0a53aa1ed6a230fb821247e6d64c134ea241804cfe44b7d67bea16a6ffea6b66bb7d40526944e9158545dbee232250f1e8f724a43f213b06b1bd92159539dc");
-        nDefaultPort = 39815;
+        nDefaultPort = 15504; // 15505 RPC
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         nSubsidyHalvingInterval = 210000000;
         nMaxReorganizationDepth = 100;
@@ -151,7 +151,7 @@ public:
         nLastPOWBlock = 2000;
         nModifierUpdateBlock = 1; // 
 
-	const char* pszTimestamp = "XREP LAUNCH";
+	const char* pszTimestamp = "XREP LAUNCH DATE";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -164,19 +164,19 @@ public:
 	genesis.nVersion = 1;
 	genesis.nTime    = 1539630702;
    	genesis.nBits    = 0x1e0ffff0;
-    	genesis.nNonce   = 6275258; 	
+    	genesis.nNonce   = 7096971; 	
 
 	//MineGenesis(genesis);
 
        
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x00000bdaec89bef3353a95fe4a8b93dd78bcbcba9ab217617975577ecf70362f"));
-        assert(genesis.hashMerkleRoot == uint256("0xc4a3e6699b115ca381c86d1cef16f4a4d388bcfe0e0e3bc954672ea8716ebc43"));
+        assert(hashGenesisBlock == uint256("0x0000043dbb1c7fd0dafceeecfd554b61e2913f71866555b86ee3b8e23b75a2f4"));
+        assert(genesis.hashMerkleRoot == uint256("0xbf9f284c28beae1b88ee76d4a0dee05b022974fd984a29c9192c7e0b8b94083b"));
 
         // DNS Seeding
-        vSeeds.push_back(CDNSSeedData("165.227.182.64", "206.81.13.159"));
-	vSeeds.push_back(CDNSSeedData("178.128.150.36", "178.128.158.22"));
-	vSeeds.push_back(CDNSSeedData("178.128.148.106", "128.199.161.121"));
+        vSeeds.push_back(CDNSSeedData("104.248.19.236", "104.248.27.40"));
+	vSeeds.push_back(CDNSSeedData("104.248.32.248", "104.248.17.166"));
+	vSeeds.push_back(CDNSSeedData("104.248.27.43", "104.248.23.86"));
 	
 
         // XREP addresses start with 'X'
@@ -189,7 +189,7 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
         // XREP BIP32 prvkeys start with 'xprv' (Bitcoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
-        // XREP BIP44 coin type is '39815'
+        // XREP BIP44 coin type is '15504'
         //  BIP44 coin type is from https://github.com/satoshilabs/slips/blob/master/slip-0044.md
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x49)(0x85).convert_to_container<std::vector<unsigned char> >();
 
